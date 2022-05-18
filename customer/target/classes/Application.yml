@@ -1,6 +1,20 @@
 server:
   port: 8081
-
 spring:
   application:
     name: microservice-customer
+  jackson:
+    serialization.write_dates_as_timestamps: false
+
+  datasource:
+    password: 'toor'
+    url: jdbc:postgresql://localhost:5432/customer
+    username: 'postgres'
+  flyway:
+    enabled: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
