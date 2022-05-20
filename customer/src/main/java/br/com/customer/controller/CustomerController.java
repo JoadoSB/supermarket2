@@ -4,6 +4,7 @@ import br.com.customer.controller.request.CustomerRequest;
 import br.com.customer.service.CustomerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/customers")
+@Tag(name = "Api to management customers", description = "Create and management customers")
 public class CustomerController {
 
     private final CustomerService customerService;
